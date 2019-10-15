@@ -1,0 +1,5 @@
+if(cursor.moveToLast()){
+     do{
+         //your operations here
+     }while(cursor.moveToPrevious());
+}
