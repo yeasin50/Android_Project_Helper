@@ -31,7 +31,7 @@ private void showAlertDialog() {
             @Override
             public void onClick(View v) {
                 int m = monthPicker.getValue();
-                Toast.makeText(getApplicationContext(), m +" "+ Mon[m] + " "+ year, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), m+1 +" "+ Mon[m] + " "+ year, Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
             }
         });
