@@ -1,0 +1,33 @@
+ private void showYearDialog() {
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); //before
+        dialog.setContentView(R.layout.yeardialog);
+
+        final Button set = (Button) dialog.findViewById(R.id.button1);
+        Button cancel = (Button) dialog.findViewById(R.id.button2);
+
+        final NumberPicker numberPicker =(NumberPicker) dialog.findViewById(R.id.numberPicker1);
+
+
+        numberPicker.setMaxValue(year+50);
+        numberPicker.setMinValue(year-50);
+        numberPicker.setWrapSelectorWheel(false);
+        numberPicker.setValue(year);
+        numberPicker.setDescendantFocusability(NumberPicker.FOCUS_BLOCK_DESCENDANTS);
+
+        set.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btn.setText(String.valueOf(numberPicker.getValue()));
+                dialog.dismiss();
+            }
+        });
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
