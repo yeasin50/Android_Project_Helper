@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="#4CAF50"
+        android:layout_height="wrap_content" >
+        <TextView android:id="@+id/year_text"
+            android:layout_margin="10dp"
+            android:textSize="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:text="Select Month"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="4"
+            android:layout_margin="5dp"
+            android:padding="3dp">
+
+            <Button
+                android:id="@+id/btnjan"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:cursorVisible="true"
+                android:text="Jan"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#0C0101" />
+
+            <Button
+                android:id="@+id/btnfeb"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:cursorVisible="true"
+                android:text="Feb"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#0C0101" />
+
+            <Button
+                android:id="@+id/btnmar"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:cursorVisible="true"
+                android:text="Mar"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#0C0101" />
+
+            <Button
+                android:id="@+id/btnaprl"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:text="A"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#0C0101"
+                android:cursorVisible="true" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="4"
+            android:layout_margin="5dp"
+            android:padding="3dp">
+
+            <Button
+                android:id="@+id/btnmay"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:cursorVisible="true"
+                android:text="May"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#0C0101" />
+
+            <Button
+                android:id="@+id/btnjun"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:cursorVisible="true"
+                android:text="Jun"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#0C0101" />
+
+            <Button
+                android:id="@+id/btnjuly"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:cursorVisible="true"
+                android:text="Jul"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#0C0101" />
+
+            <Button
+                android:id="@+id/btnaug"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:cursorVisible="true"
+                android:text="Aug"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#0C0101" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="4"
+            android:layout_margin="5dp"
+            android:padding="3dp">
+
+            <Button
+                android:id="@+id/btnsep"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:cursorVisible="true"
+                android:text="Sep"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#0C0101" />
+
+            <Button
+                android:id="@+id/btnocto"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:cursorVisible="true"
+                android:text="Oct"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#0C0101" />
+
+            <Button
+                android:id="@+id/btnnovve"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:cursorVisible="true"
+                android:text="Nov"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#0C0101" />
+
+            <Button
+                android:id="@+id/btndecem"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:cursorVisible="true"
+                android:text="Dec"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#0C0101" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:gravity="end"
+        android:orientation="horizontal">
+        <Button
+
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:id="@+id/button2m"
+            android:layout_width="0dp"
+           android:layout_margin="3dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/button1m"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:text="Ok" />
+    </LinearLayout>
+
+
+</LinearLayout>
