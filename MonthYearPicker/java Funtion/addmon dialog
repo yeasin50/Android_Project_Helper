@@ -1,0 +1,37 @@
+  private void addMON() {
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); //before
+        dialog.setContentView(R.layout.nummonpicstring);
+
+        final Button sest = (Button) dialog.findViewById(R.id.sbutton2setMon);
+        Button cancel = (Button) dialog.findViewById(R.id.sbutton1cancelmon);
+        final NumberPicker numberPickerM =(NumberPicker) dialog.findViewById(R.id.smonthpicker);
+
+
+        numberPickerM.setMaxValue(Mon.length -1 );
+        numberPickerM.setMinValue(0);
+        numberPickerM.setValue(month);
+        numberPickerM.setWrapSelectorWheel(false);
+        numberPickerM.setDisplayedValues(Mon);
+        numberPickerM.setDescendantFocusability(NumberPicker.FOCUS_BLOCK_DESCENDANTS);
+
+        sest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int index = numberPickerM.getValue() +1;
+                String m = Mon[index];
+                btnMonth.setText( m+" " + index);
+                Toast.makeText(getApplicationContext(), "" + String.valueOf(index) , Toast.LENGTH_SHORT).show();
+               dialog.dismiss();
+            }
+        });
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+
+    }
