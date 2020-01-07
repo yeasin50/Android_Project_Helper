@@ -1,0 +1,18 @@
+  public ArrayList<Student> getBatchStudents(String batch){
+        SQLiteDatabase database = this.getReadableDatabase();
+
+        ArrayList<Student> studentArrayList = new ArrayList<>();
+        Cursor cursor = database.rawQuery("SELECT * FROM "+ TABLE_NAME + " WHERE batch='"+batch+"'",null);
+
+        if(cursor.moveToFirst()){
+            do{
+               //
+
+                studentArrayList.add(student);
+            }while (cursor.moveToNext());
+
+        }
+
+        database.close();
+        return studentArrayList;
+    }
