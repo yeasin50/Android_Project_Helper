@@ -1,0 +1,34 @@
+   String phoneNo = PphnTextView.getText().toString();
+//                    uses-permission android:name="android.permission.SEND_SMS"/>
+                            SmsManager.getDefault().sendTextMessage(phoneNo, null, "Prese", null, null);
+//                    itemView.getContext().startActivity( new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", phoneNo, null)).putExtra("sms_body",sms));
+                       
+                       
+   final AlertDialog alertDialog = new AlertDialog.Builder(v.getContext())
+                    .setTitle(whom)
+                    .setMessage("Make Call for "+nameTextView.getText()+".\n"+phnnum+"." )
+                    .setPositiveButton("Call",null)
+                    .setNegativeButton("Cancel", null)
+                    .create();
+            alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {
+                @Override
+                public void onShow(DialogInterface dialog) {
+                    Button psstbn= ((AlertDialog)dialog).getButton(DialogInterface.BUTTON_POSITIVE);
+                    Button negbtn = ((AlertDialog)dialog).getButton(DialogInterface.BUTTON_NEGATIVE);
+
+                    psstbn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            String phnnum = phnTextView.getText().toString();
+                            try {
+                                itemView.getContext().startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:"+phnnum)));
+                                alertDialog.dismiss();
+
+                            }catch (Exception a){
+                                TOAST(itemView.getContext(),"Failed to Call");
+                                alertDialog.dismiss();
+                            }
+                        }
+
+                    });                  
+                       
