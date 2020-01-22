@@ -1,0 +1,30 @@
+// Activity
+
+        checkBoxAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(checkBoxAll.isChecked()){
+                    attendanceAdapter.SelectAll();
+                }
+                else attendanceAdapter.UnSelectAll();
+            }
+        });
+        
+/// in adapter  
+  @Override
+    public void onBindViewHolder(@NonNull SViewHolder holder, int position) {
+        holder.nameTV.setText(getItem(position).getStdName());
+        holder.idTV.setText(getItem(position).getStdId());
+
+        if(!isSelectedAll) holder.checkBox.setChecked(false);
+        else holder.checkBox.setChecked(true);
+    }
+
+public void SelectAll(){
+        isSelectedAll= true;
+        notifyDataSetChanged();
+    }
+    public void UnSelectAll(){
+        isSelectedAll= false;
+        notifyDataSetChanged();
+    }
