@@ -1,5 +1,10 @@
 from fragment>>
 
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
         sharedViewModel = ViewModelProviders.of(getActivity()).get(SharedViewModel.class);
         sharedViewModel.getText().observe(getViewLifecycleOwner(), new Observer<CharSequence>() {
             @Override
@@ -7,3 +12,4 @@ from fragment>>
                 editText.setText(charSequence);
             }
         });
+    }
