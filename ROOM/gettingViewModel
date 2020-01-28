@@ -1,0 +1,9 @@
+from fragment>>
+
+        sharedViewModel = ViewModelProviders.of(getActivity()).get(SharedViewModel.class);
+        sharedViewModel.getText().observe(getViewLifecycleOwner(), new Observer<CharSequence>() {
+            @Override
+            public void onChanged(CharSequence charSequence) {
+                editText.setText(charSequence);
+            }
+        });
