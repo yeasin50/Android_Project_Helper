@@ -1,0 +1,75 @@
+
+    private void ShowSTDAdding_Dialog() {
+        final Dialog dialog = new Dialog(this);
+
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.add_student_dialog);
+        dialog.setCancelable(true);
+        dialog.setCanceledOnTouchOutside(true);
+
+
+        final TextInputEditText nameEditText = dialog.findViewById(R.id.textInputEditText_Name);
+        final TextInputEditText idEditText =  dialog.findViewById(R.id.textInputEditText_ID);
+        final TextInputEditText batchEditText = dialog.findViewById(R.id.textInputEditText3_BatchName);
+        final TextInputEditText phnNumEditText = dialog.findViewById(R.id.textInputEditTextPhone);
+        final TextInputEditText guardianPhnEdittxt  = dialog.findViewById(R.id.textInputEditTextGurdianphn);
+
+
+        Button addstdbtn = dialog.findViewById(R.id.buttonaddstd);
+        Button cancelbtn = dialog.findViewById(R.id.button2canceldial);
+
+        addstdbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name = nameEditText.getText().toString().trim();
+                String id = idEditText.getText().toString().trim();
+                String batch = batchEditText.getText().toString().trim();
+                String phn= phnNumEditText.getText().toString().trim();
+                String guardianphn = guardianPhnEdittxt.getText().toString().trim();
+
+                if(name.isEmpty()){
+                    nameEditText.setError("Enter Name");
+                    nameEditText.requestFocus();
+                    return;
+                }
+                if(id.isEmpty()){
+                    idEditText.setError("Enter id");
+                    idEditText.requestFocus();
+                    return;
+                }
+                if(batch.isEmpty()){
+                    batchEditText.setError("Enter Batch");
+                    batchEditText.requestFocus();
+                    return;
+                }
+                if(phn.isEmpty()){
+                    phnNumEditText.setError("Enter Phone Number");
+                    phnNumEditText.requestFocus();
+                    return;
+                }
+                if(guardianphn.isEmpty()){
+                    guardianPhnEdittxt.setError("Enter guardian's Number");
+                    guardianPhnEdittxt.requestFocus();
+                    return;
+                }
+
+                Student  student = new Student(name,id,batch,phn,guardianphn);
+                student.setStdtotalPresent(0);
+//                studentViewModel.insertStd(student);
+                dialog.dismiss();
+                ShowTOAST("Successfully Added.");
+
+            }
+        });
+
+        cancelbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                ShowTOAST("Canceled");
+            }
+        });
+        dialog.show();
+    }
