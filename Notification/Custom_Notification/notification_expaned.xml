@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="260dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView_expanned1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This is custom Notification"
+        style="@style/TextAppearance.Compat.Notification"
+        android:textColor="#FFF"
+        android:padding="8dp"
+        android:textAlignment="center"
+        android:background="@android:color/holo_red_light"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/z"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
