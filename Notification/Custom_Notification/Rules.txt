@@ -1,0 +1,4 @@
+By using remote view we can implement custom Notification.for the input use RemoteInput.
+** Collapsed layoutHeight <=64dp
+** Expanded layoutheight<=260dp
+
