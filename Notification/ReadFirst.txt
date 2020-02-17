@@ -1,0 +1,9 @@
+For Simple Notification we Need Change Manifest and add dependency(for Extended like Media Stye) 
+dependency:
+
+    implementation "androidx.media:media:1.1.0"
+    
+    
+manifest:
+ android:name=".App"
+ also on broadCast ,, uploaded manifest
