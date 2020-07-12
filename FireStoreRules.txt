@@ -1,0 +1,23 @@
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+     match /collection1/{userdoc_Id}{
+       allow read: if isAuthenticated() && request.auth.uid == resource.data.userId;
+       allow create: if isAuthenticated() && request.auth.uid == request.resource.data.userId;
+       allow update, delete: if isAuthenticated() && request.auth.uid == resource.data.userId;
+    }
+
+       match /collection2/{DocID} {
+       allow read: if isAuthenticated() && request.auth.uid == resource.data.userId;
+       allow create: if isAuthenticated() && request.auth.uid == request.resource.data.userId;
+       allow update, delete: if isAuthenticated() && request.auth.uid == resource.data.userId;
+    }
+    //this way u can create funtion
+    function isAuthenticated(){
+    return request.auth != null;
+    }
+  }
+}
+
+
